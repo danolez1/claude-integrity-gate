@@ -43,12 +43,6 @@ install.sh                      # Installation script
 
 ## Installation
 
-### Skills.sh (Claude Code plugin marketplace)
-
-```bash
-claude plugin add danolez1/claude-integrity-gate
-```
-
 ### npx (one command, no clone)
 
 ```bash
