@@ -1,0 +1,33 @@
+{
+  "name": "claude-integrity-gate",
+  "version": "1.0.0",
+  "description": "Output verification system for Claude Code. 25 rules + 6 patterns enforced across 12 layers.",
+  "bin": {
+    "claude-integrity-gate": "./bin/install.js"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "ai-safety",
+    "verification",
+    "hooks",
+    "integrity",
+    "output-validation"
+  ],
+  "author": "Daniel Fatunmbi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tunmise-fatunmbi/claude-integrity-gate.git"
+  },
+  "files": [
+    "bin/",
+    "hooks/",
+    "skills/",
+    "commands/",
+    "memory/",
+    "global-claude-md/",
+    "claude-md-section.md",
+    "settings-hooks.json"
+  ]
+}
