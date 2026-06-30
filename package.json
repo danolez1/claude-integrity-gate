@@ -26,8 +26,10 @@
     "skills/",
     "commands/",
     "memory/",
+    "plugins/",
     "global-claude-md/",
     "claude-md-section.md",
-    "settings-hooks.json"
+    "settings-hooks.json",
+    "plugin.json"
   ]
 }

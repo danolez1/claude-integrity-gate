@@ -43,17 +43,30 @@ install.sh                      # Installation script
 
 ## Installation
 
-### Quick Install
+### Skills.sh (Claude Code plugin marketplace)
 
 ```bash
-git clone <this-repo> ~/claude-integrity-gate
-cd ~/claude-integrity-gate
-./install.sh
+claude plugin add danolez1/claude-integrity-gate
 ```
 
-Then manually:
-1. Merge `settings-hooks.json` into `~/.claude/settings.json` (add to `hooks` key)
-2. Prepend `claude-md-section.md` content to top of `~/.claude/CLAUDE.md`
+### npx (one command, no clone)
+
+```bash
+npx claude-integrity-gate
+```
+
+### curl (no dependencies)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/danolez1/claude-integrity-gate/main/install.sh | bash
+```
+
+### Clone
+
+```bash
+git clone https://github.com/danolez1/claude-integrity-gate.git
+cd claude-integrity-gate && ./install.sh
+```
 
 ### Manual Install
 
