@@ -15,7 +15,7 @@ SETTINGS="$CLAUDE_DIR/settings.json"
 CLAUDE_MD="$CLAUDE_DIR/CLAUDE.md"
 
 # Determine source: either from cloned repo or download from GitHub
-REPO_URL="https://raw.githubusercontent.com/tunmise-fatunmbi/claude-integrity-gate/main"
+REPO_URL="https://raw.githubusercontent.com/danolez1/claude-integrity-gate/main"
 
 if [ -f "$(dirname "$0")/hooks/output-integrity-gate.js" ] 2>/dev/null; then
   SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
