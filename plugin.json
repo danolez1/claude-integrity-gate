@@ -1,7 +1,7 @@
 {
   "name": "integrity-gate",
   "version": "1.0.0",
-  "description": "Output verification system for Claude Code. 25 rules + 6 patterns prevent AI fabrications, contradictions, and unfounded conclusions.",
+  "description": "Output verification system for Claude Code. 26 rules + 6 patterns prevent AI fabrications, contradictions, and unfounded conclusions.",
   "author": "danolez1",
   "license": "MIT",
   "repository": "danolez1/claude-integrity-gate",

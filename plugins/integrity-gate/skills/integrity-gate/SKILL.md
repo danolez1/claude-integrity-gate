@@ -7,7 +7,7 @@ description: Manually invoke output integrity validation on high-stakes content 
 
 When invoked, perform the following validation on the MOST RECENT output or draft in the conversation:
 
-## Checklist (all 25 rules)
+## Checklist (all 26 rules)
 
 Run through every rule. For each, mark PASS or FAIL with evidence:
 

@@ -142,8 +142,8 @@ if (gitRoot) {
     const indexContent = fs.readFileSync(memoryIndex, 'utf8');
     if (!indexContent.includes('integrity_gate')) {
       const append = [
-        '- [feedback_output_integrity_gate.md](feedback_output_integrity_gate.md) — 25 verification rules + 6 patterns: no output without evidence check',
-        '- [feedback_integrity_patterns.md](feedback_integrity_patterns.md) — 6 failure patterns behind the 25 rules',
+        '- [feedback_output_integrity_gate.md](feedback_output_integrity_gate.md) — 26 verification rules + 6 patterns: no output without evidence check',
+        '- [feedback_integrity_patterns.md](feedback_integrity_patterns.md) — 6 failure patterns behind the 26 rules',
       ].join('\n') + '\n';
       fs.appendFileSync(memoryIndex, append);
     }

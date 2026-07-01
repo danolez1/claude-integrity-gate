@@ -186,8 +186,8 @@ if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
   # Add to MEMORY.md index if it exists
   if [ -f "$MEMORY_DIR/MEMORY.md" ]; then
     if ! grep -q "integrity_gate" "$MEMORY_DIR/MEMORY.md" 2>/dev/null; then
-      echo "- [feedback_output_integrity_gate.md](feedback_output_integrity_gate.md) — 25 verification rules + 6 patterns: no output without evidence check" >> "$MEMORY_DIR/MEMORY.md"
-      echo "- [feedback_integrity_patterns.md](feedback_integrity_patterns.md) — 6 failure patterns behind the 25 rules" >> "$MEMORY_DIR/MEMORY.md"
+      echo "- [feedback_output_integrity_gate.md](feedback_output_integrity_gate.md) — 26 verification rules + 6 patterns: no output without evidence check" >> "$MEMORY_DIR/MEMORY.md"
+      echo "- [feedback_integrity_patterns.md](feedback_integrity_patterns.md) — 6 failure patterns behind the 26 rules" >> "$MEMORY_DIR/MEMORY.md"
     fi
   fi
   echo "[6/6] Memory installed for current project ($GIT_ROOT)"

@@ -1,7 +1,7 @@
 {
   "name": "claude-integrity-gate",
-  "version": "1.0.0",
-  "description": "Output verification system for Claude Code. 25 rules + 6 patterns enforced across 12 layers.",
+  "version": "1.1.0",
+  "description": "Output verification system for Claude Code. 26 rules + 6 patterns enforced across 12 layers.",
   "bin": {
     "claude-integrity-gate": "bin/install.js"
   },

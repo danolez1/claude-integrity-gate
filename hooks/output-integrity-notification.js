@@ -6,7 +6,7 @@
 
 const compact = `
 INTEGRITY GATE RE-INJECTION (post-compression):
-All 25 output integrity rules remain ACTIVE. Context compression does not disable them.
+All 26 output integrity rules remain ACTIVE. Context compression does not disable them.
 Key reminders:
 - No claim without evidence gathered THIS turn
 - UNKNOWN for every unverified gap

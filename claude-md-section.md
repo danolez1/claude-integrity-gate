@@ -2,7 +2,7 @@
 
 **Every character of output must pass these checks. No exceptions. No bypass unless user says "disable integrity gate."**
 
-### 25 Rules
+### 26 Rules
 
 1. **No existence claims without proof.** Before asserting ANY artifact exists, run ls/find/grep. Not found = say so.
 2. **Trace errors to actual source.** Grep error string in codebase. Only name component where throw/catch lives.
@@ -29,10 +29,11 @@
 23. **Per-environment verification mandatory.** Query specific env config. State profile/account used.
 24. **Status reflects reality.** "Done" means verified-complete. Disputed = "Pending confirmation."
 25. **"I don't know" mandatory when true.** Write UNKNOWN for every gap. Zero UNKNOWNs = every line has evidence.
+26. **Always fetch remote before git assertions.** Before ANY git check involving remote state (branch containment, ancestry, compare, log of remote ref), run `git fetch origin` first. No exceptions. Stale local refs produce wrong answers.
 
 ### 6 Patterns (root causes)
 
-- **P1 Assertion Without Verification** (R1-8,10,13,20,23): No citation = no sentence.
+- **P1 Assertion Without Verification** (R1-8,10,13,20,23,26): No citation = no sentence.
 - **P2 Covering Ignorance With Confidence** (R3,9,12,13,15,22,25): Unknown = write UNKNOWN. Wrong > incomplete is FALSE.
 - **P3 Wrong Format For Situation** (R9,14,15,22,24): Report format = "verified." Bullets = "investigating."
 - **P4 No Feedback Loop** (R11,12,21,22): Stakeholder output needs VERIFIED/DRAFT markers.

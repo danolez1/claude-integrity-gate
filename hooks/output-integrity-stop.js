@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // output-integrity-stop — Claude Code Stop hook (fires AFTER every assistant response)
 //
-// Post-output validation: scans the assistant's final output for violations of the 25 rules.
+// Post-output validation: scans the assistant's final output for violations of the 26 rules.
 // If violations detected, emits warning so model self-corrects on next turn.
 
 const fs = require('fs');

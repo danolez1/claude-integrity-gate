@@ -6,7 +6,7 @@ Born from a production incident where AI outputs sent directly to a team lead co
 
 ## What This Is
 
-25 verification rules + 6 failure patterns, enforced across 12 layers in Claude Code so that no output is generated without passing integrity checks. Universal across all projects and repos.
+26 verification rules + 6 failure patterns, enforced across 12 layers in Claude Code so that no output is generated without passing integrity checks. Universal across all projects and repos.
 
 ## The Problem
 
@@ -22,7 +22,7 @@ AI assistants:
 
 ```
 hooks/                          # Claude Code hook scripts (6 files)
-  output-integrity-gate.js        SessionStart: injects full 25 rules
+  output-integrity-gate.js        SessionStart: injects full 26 rules
   output-integrity-stop.js        Stop: post-output violation scan
   output-integrity-prompt-reinject.js  UserPromptSubmit: per-turn reinject
   output-integrity-posttool.js    PostToolUse: validates written docs
@@ -79,7 +79,7 @@ If starting fresh, copy `global-claude-md/CLAUDE.md` directly as `~/.claude/CLAU
 
 | # | Layer | When | Purpose |
 |---|-------|------|---------|
-| 1 | SessionStart hook | Session opens | Full 25 rules injected into context |
+| 1 | SessionStart hook | Session opens | Full 26 rules injected into context |
 | 2 | Stop hook | After every response | Post-output violation scanning |
 | 3 | UserPromptSubmit hook | Every user message | Re-injects rules (survives compression) |
 | 4 | PostToolUse hook | After Edit/Write on .md | Validates doc content |
@@ -92,7 +92,7 @@ If starting fresh, copy `global-claude-md/CLAUDE.md` directly as `~/.claude/CLAU
 | 11 | Memory (all projects) | Recalled in any project | Same rules everywhere |
 | 12 | Settings.json | Hook registration | All hook types registered |
 
-## The 25 Rules
+## The 26 Rules
 
 1. No existence claims without proof
 2. Trace errors to actual source
@@ -119,12 +119,13 @@ If starting fresh, copy `global-claude-md/CLAUDE.md` directly as `~/.claude/CLAU
 23. Per-environment verification mandatory
 24. Status reflects reality
 25. "I don't know" is mandatory when true
+26. Always fetch remote before git assertions
 
 ## The 6 Patterns
 
 | Pattern | Root Cause | Rules |
 |---------|-----------|-------|
-| P1: Assertion Without Verification | "Plausible" treated as "true" | R1-8, R10, R13, R20, R23 |
+| P1: Assertion Without Verification | "Plausible" treated as "true" | R1-8, R10, R13, R20, R23, R26 |
 | P2: Covering Ignorance With Confidence | Gaps filled with guesses | R3, R9, R12, R13, R15, R22, R25 |
 | P3: Wrong Format For Situation | Report format for unverified content | R9, R14, R15, R22, R24 |
 | P4: No Feedback Loop | No VERIFIED/DRAFT markers | R11, R12, R21, R22 |

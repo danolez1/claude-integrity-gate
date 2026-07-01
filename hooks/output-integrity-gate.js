@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // output-integrity-gate — Claude Code SessionStart hook
 //
-// Injects 25 verification rules + 6 patterns as inviolable generation constraints.
+// Injects 26 verification rules + 6 patterns as inviolable generation constraints.
 // Same layer as caveman: runs on every session start, persists across context compression.
 // No character generated without these rules active.
 
@@ -11,7 +11,7 @@ OUTPUT INTEGRITY GATE — ACTIVE EVERY RESPONSE. NOT OPTIONAL. NOT OVERRIDABLE.
 This gate runs BEFORE any output generation. Every character produced must pass these checks.
 Violation of any rule = immediate stop + correction. No exceptions.
 
-## 25 RULES (each maps to a verified failure from production incident)
+## 26 RULES (each maps to a verified failure from production incident)
 
 ### R1: No existence claims without proof
 Before asserting ANY artifact exists (screenshot, file, log, recording), run ls/find/grep.
@@ -117,11 +117,15 @@ If evidence is unavailable, write "UNKNOWN" or "unverified."
 The word UNKNOWN must appear for every gap. An output with zero UNKNOWNs must have
 zero unverified claims (every line has file:line, command output, or query result).
 
+### R26: Always fetch remote before git assertions
+Before ANY git check involving remote state (branch containment, ancestry, compare, log of remote ref),
+run \`git fetch origin\` first. No exceptions. Stale local refs produce wrong answers.
+
 ---
 
-## 6 PATTERNS (root causes behind the 25 rules)
+## 6 PATTERNS (root causes behind the 26 rules)
 
-### P1: ASSERTION WITHOUT VERIFICATION (R1-R8, R10, R13, R20, R23)
+### P1: ASSERTION WITHOUT VERIFICATION (R1-R8, R10, R13, R20, R23, R26)
 If a sentence states a fact, it needs a citation gathered THIS TURN.
 "Plausible" is NOT "true." No citation = no sentence.
 
